@@ -1,0 +1,15 @@
+.campo-desativado{
+  background-color: lightblue;
+}
+
+.icones{
+  vertical-align: middle;
+}
+
+.digito-certo{
+  border: 3px solid green;
+}
+
+.digito-errado{
+  border: 3px solid red;
+}
