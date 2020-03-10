@@ -11,6 +11,10 @@
     <div class="container">
     <h1>Contando palavras</h1>
     <p class="frase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="center">
+      <img src="img/spinner.gif" alt="Spinner" id="spinner">
+      <p id="erro">Ocorreu um erro tente novamente.</p>
+    </div>
     <ul class="informacoes">
       <li>
          <i class="small material-icons icones">keyboard_hide</i>
@@ -20,6 +24,7 @@
         <i class="small material-icons icones">access_alarm</i>
         <span id="segundos">3</span> segundos
       </li>
+
     </ul>
 
     <textarea class="campo-caractere" rows="4" cols="40"></textarea>
@@ -28,27 +33,36 @@
         <li><span id="palavra">0</span> Palavras digitadas!</li>
         <li><span id="letra">0</span> Letras digitadas!</li>
         <button id="apagar" style="margin-top:15px;">Limpar</button>
+        <button id="botao-placar" style="margin-top:15px;">Placar</button>
+        <button id="botao-troca-frase" style="margin-top:15px;">Frase</button>
+        <button id="botao-frase-expecifica" style="margin-top:15px;">Especifica</button>
+        <input type="number" id="numero-frase" min="0">
     </ul>
   </div>
-  <section >
-    <table style="border 1px solid " class="placar">
+  <section class="placar" style="margin-top: 200px;">
+    <h1 style="margin-top:10px;">Placar</h1>
+    <table style="border 1px solid; margin-bottom:10px;" >
       <thead>
         <tr>
           <th>N do jogador</th>
           <th>N Palavras</th>
+          <th>Remover</th>
         </tr>
       <thead>
       <tbody>
-        <td>Matias</td>
-        <td>30</td>
-        <td>
-          <a href="#" class="botao-remover"><i class="small material-icons">cancel</i></a>
-        </td>
-
+        <tr>
+          <td>Matias</td>
+          <td>30</td>
+          <td>
+            <a href="#" class="botao-remover"><i class="small material-icons">delete</i></a>
+          </td>
+        </tr>
       </tbody>
   </table>
   </section>
   <script src="js/jquery.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/placar.js"></script>
+  <script src="js/frases.js"></script>
 </body>
 </html>

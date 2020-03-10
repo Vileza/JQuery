@@ -6,6 +6,7 @@ var tempoInicial = $("#segundos").text();
     iniciaCronometro();
     verificadorDeTexto();
     $("#apagar").click(reiniciar);
+    $(".botao-remover").click(removeLinhaTabela);
     removeLinhaTabela();
 
   });
@@ -17,11 +18,18 @@ function atualizaTamanhoFrase(){
   contagem.text(numeroPalavras);
 }
 
+function tempoInicialFrase(tempo){
+  tempoInicial = tempo;
+  $("#segundos").text(tempo);
+}
+
+
 var campoTexto = $(".campo-caractere");
 
-var frase = $(".frase").text();
+
 function verificadorDeTexto(){
   campoTexto.on("input",  function(){
+    var frase = $(".frase").text();
     var digitado = campoTexto.val();
     var comparavel = frase.substr(0, digitado.length);
     if(digitado == comparavel){
@@ -47,8 +55,9 @@ function campoTextoJogo(){
 }
 
 function iniciaCronometro(){
-  var tempo = $("#segundos").text();
+  var campoTexto = $(".campo-caractere");
   campoTexto.one("focus", function(){
+    var tempo = $("#segundos").text();
     var idtempo = setInterval(function(){
       tempo--;
       $("#segundos").text(tempo);
@@ -65,27 +74,6 @@ function finalizarJogo(){
   campoTexto.toggleClass("campo-desativado");
   placarJogo();
 }
-
-function placarJogo(){
-  var corpoTabela = $(".placar").find("tbody");
-  var nomeJogador = "David";
-  var placarPalavras = $("#palavra").text();
-  console.log(placarPalavras);
-  var linha = "<tr>"+
-                  "<td>"+ nomeJogador + "</td>"+
-                  "<td>"+ placarPalavras + "</td>"+
-              "<tr>";
-  corpoTabela.prepend(linha);
-
-}
-
-function removeLinhaTabela(){
-  $(".botao-remover").click(function(){
-    $(this).parent().parent().remove();
-  });
-}
-
-
 
 function reiniciar(){
   campoTexto.attr("readonly", false);
