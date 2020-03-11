@@ -26,3 +26,13 @@ function mostrarFrase(data){
   atualizaTamanhoFrase();
   tempoInicialFrase(data[numeroAleatorio].tempo);
 }
+
+function buscaFrase(){
+  var frase = $(".frase");
+  var fraseID = $(".#numero-frase");
+  $.get('http://localhost:3000/frases',dados,trocaFrase);
+}
+
+function trocaFrase(data){
+  console.log(data);
+}
