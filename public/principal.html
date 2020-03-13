@@ -28,16 +28,19 @@
     </ul>
 
     <textarea class="campo-caractere" rows="4" cols="40"></textarea>
-
+    <div class="">
+      <button id="apagar" style="margin-top:15px;">Limpar</button>
+      <button id="botao-placar" style="margin-top:15px;">Placar</button>
+      <button id="botao-troca-frase" style="margin-top:15px;">Frase</button>
+      <button id="botao-frase-expecifica" style="margin-top:15px;">Especifica</button>
+          <input type="number" id="numero-frase" min="0">
+    </div>
     <ul>
         <li><span id="palavra">0</span> Palavras digitadas!</li>
         <li><span id="letra">0</span> Letras digitadas!</li>
-        <button id="apagar" style="margin-top:15px;">Limpar</button>
-        <button id="botao-placar" style="margin-top:15px;">Placar</button>
-        <button id="botao-troca-frase" style="margin-top:15px;">Frase</button>
-        <button id="botao-frase-expecifica" style="margin-top:15px;">Especifica</button>
-        <input type="number" id="numero-frase" min="0">
+
     </ul>
+
   </div>
   <section class="placar" style="margin-top: 200px;">
     <h1 style="margin-top:10px;">Placar</h1>
@@ -60,7 +63,8 @@
       </tbody>
   </table>
   </section>
-  <script src="js/jquery.js"></script>
+  <!--<script src="js/jquery.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/placar.js"></script>
   <script src="js/frases.js"></script>
